@@ -1,0 +1,78 @@
+###
+POST http://localhost:3000/api/v1/user
+Content-Type: application/json
+
+{
+    "name": "jolomi",
+    "email": "jolomi@gmail.com",
+    "password": "12345678"
+}
+
+###
+POST http://localhost:3000/api/v1/user/login
+Content-Type: application/json
+
+{
+    "email": "jolomi@gmail.com",
+    "password": "12345678"
+}
+
+###
+POST http://localhost:3000/api/v1/user/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFkZDVjM2ZlMzE1ZDI1NTIyNzdjOGIiLCJpYXQiOjE2ODkxMTYxNDV9.XE7PpAUy3IKMrHChQdgwIOjGx9PshfIxfOd4aeAbzGQ" 
+}
+
+###
+DELETE http://localhost:3000/api/v1/user
+Content-Type: application/json
+
+{
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFkZDVjM2ZlMzE1ZDI1NTIyNzdjOGIiLCJpYXQiOjE2ODkxMTY0ODB9.GoVXhZ_84kXoKVH9N_3eKkqI7fBMheW-vgoo85ZYgwE"
+}
+
+###
+GET http://localhost:3000/api/v1/messages
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFkZDVjM2ZlMzE1ZDI1NTIyNzdjOGIiLCJpYXQiOjE2ODkxMTYxNDV9.XE7PpAUy3IKMrHChQdgwIOjGx9PshfIxfOd4aeAbzGQ"  
+}
+
+###
+POST http://localhost:3000/api/v1/messages
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFkYTQ1NzY2NTkyMjNjZTFhZWYwNDIiLCJpYXQiOjE2ODkxMDYwNjV9.Maeh8Ccdwtr3we91ep8-qPM6HuTzTWr6sunEKraWAXI",
+    "title": "Buy a car",
+    "description": "going to buy a car"
+}
+
+###
+GET http://localhost:3000/api/v1/messages/64add97db28653d89e283d7c
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFkYTQ1NzY2NTkyMjNjZTFhZWYwNDIiLCJpYXQiOjE2ODkxMDYwNjV9.Maeh8Ccdwtr3we91ep8-qPM6HuTzTWr6sunEKraWAXI"
+}
+
+###
+PATCH http://localhost:3000/api/v1/messages/64add97db28653d89e283d7c
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFkYTQ1NzY2NTkyMjNjZTFhZWYwNDIiLCJpYXQiOjE2ODkxMDYwNjV9.Maeh8Ccdwtr3we91ep8-qPM6HuTzTWr6sunEKraWAXI",
+    "title": "I bought a car",
+    "description": "Toyota Avalon"
+}
+
+###
+DELETE http:localhost:3000/api/v1/messages/64add97db28653d89e283d7c
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFkYTQ1NzY2NTkyMjNjZTFhZWYwNDIiLCJpYXQiOjE2ODkxMDYwNjV9.Maeh8Ccdwtr3we91ep8-qPM6HuTzTWr6sunEKraWAXI"
+}

@@ -5,11 +5,11 @@ const router = new express.Router();
 
 // Create a new message
 router.post("/api/v1/messages", auth, async (req, res) => {
-  const message = new Message({
-    ...req.body,
-    owner: req.user._id,
-  });
   try {
+    const message = new Message({
+      ...req.body,
+      owner: req.user._id,
+    });
     await message.save();
     res.status(201).send(message);
   } catch (error) {
